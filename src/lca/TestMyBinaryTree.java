@@ -1,0 +1,14 @@
+package lca;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestMyBinaryTree {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}
