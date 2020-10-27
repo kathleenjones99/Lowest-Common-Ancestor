@@ -33,4 +33,9 @@ public class TestMyBinaryTree {
         assertEquals("Given a non-empty binary tree, the lowest common ancestor should be the lowest node in the tree that has both passed nodes as a descendent", tree.findLCA(4, 5), tree.root.left);
         assertEquals("Given a non-empty binary tree, the lowest common ancestor should be the lowest node in the tree that has both passed nodes as a descendent", tree.findLCA(2, 7), tree.root);       
 	}
+	
+	@Test
+	public void testDAGCapabilities(){
+		
+	}
 }
