@@ -21,30 +21,30 @@ public class MyBinaryTree {
         root = null; 
     } 
   
-    private Node findLCA(int node1, int node2) {
+    Node findLCA(int node1, int node2) {
     	return findLCA(root, node1, node2);
     }
     
-    private Node findLCA(Node node, int node1, int node2) {
+    private Node findLCA(Node root, int node1, int node2) {
     	
     	Node LCA = null;
     	
-    	if(node == null) {											// base case, tree/node passed is null
+    	if(root == null) {											// base case, tree/node passed is null
     		return LCA;
-    	} else if (node.key == node1 || node.key == node2) {		// If either n1 or n2 matches with root's key, report 
-            LCA = node;  											// the presence by returning root (Note that if a key is 
-            return LCA;
-    	}    			   											// ancestor of other, then the ancestor key becomes LCA)
+    	} else if (root.key == node1 || root.key == node2) {		// If either n1 or n2 matches with root's key, report 
+            LCA = root;  											// the presence by returning root (Note that if a key is 
+            return LCA;												// ancestor of other, then the ancestor key becomes LCA)
+    	}    			   											
     	
-        Node left_lca = findLCA(node.left, node1, node2); 			// Look for keys in left and right subtrees 
-        Node right_lca = findLCA(node.right, node1, node2); 
+        Node left_lca = findLCA(root.left, node1, node2); 			// Look for keys in left and right subtrees 
+        Node right_lca = findLCA(root.right, node1, node2); 
   
         // If both of the above calls return Non-NULL, then one key 
         // is present in one subtree and other is present in other, 
         // so this node is the LCA.
         // Otherwise check if left subtree or right subtree is LCA 
         if (left_lca!=null && right_lca!=null) { 
-            LCA = node; 
+            LCA = root; 
         } else {													
         	LCA = (left_lca != null) ? left_lca : right_lca; 
         }
