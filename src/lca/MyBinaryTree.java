@@ -7,6 +7,19 @@ package lca;
 
 public class MyBinaryTree {
 
+	class Node {
+		
+		int key; 
+	    Node left, right; 
+	  
+	    public Node(int item) 
+	    { 
+	        key = item; 
+	        left = right = null; 
+	    }
+	    
+	}
+	
 	// Root of Binary Tree 
     Node root; 
   
